@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Megaphone, Target, MessageSquare, Calendar, Send, Users, Loader2 } from 'lucide-react';
+import { ArrowLeft, Megaphone,  MessageSquare, Calendar, Send } from 'lucide-react';
 import api from '../api/apiClient';
 import Header from '../components/Header';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -34,9 +34,7 @@ export default function CampaignDetail() {
   const [campaign, setCampaign] = useState<Campaign | null>(null);
   const [loading, setLoading] = useState(true);
   const [sending, setSending] = useState(false);
-  const [audienceLoading, setAudienceLoading] = useState(false);
-  const [audience, setAudience] = useState<Customer[]>([]);
-  const [showAudience, setShowAudience] = useState(false);
+  
 
   useEffect(() => {
     async function loadCampaign() {

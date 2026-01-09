@@ -28,7 +28,6 @@ interface Payment {
 export default function PaymentPage() {
   const { id, orderId } = useParams<{ id?: string; orderId?: string }>();
   const navigate = useNavigate();
-  const location = useLocation();
   const [payment, setPayment] = useState<Payment | null>(null);
   const [loading, setLoading] = useState(true);
   const [updating, setUpdating] = useState(false);

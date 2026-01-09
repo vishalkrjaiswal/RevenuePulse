@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Save, User, Mail, Upload, Phone } from "lucide-react";
+import { ArrowLeft, Save, User, Mail, Upload} from "lucide-react";
 import Papa from "papaparse";
 import api from "../api/apiClient";
 import Header from "../components/Header";
