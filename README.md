@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # RevenuePulse 💰📊
 
 RevenuePulse is a full-stack MERN CRM application designed to automate business follow-ups, track client payments, and enable multi-channel customer communication through SMS and Email notifications.
@@ -217,3 +218,5 @@ Not deployed yet, but planning to use:
 
 
 ---
+=======
+>>>>>>> 626476f (authtentication changes)
