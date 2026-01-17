@@ -4,7 +4,7 @@ import axios from "axios";
 axios.defaults.withCredentials = true;
 
 // Base URL from env variable (no trailing slash)
-const RAW_BASE = import.meta.env.VITE_API_URL || "http://localhost:4000";
+const RAW_BASE = import.meta.env.VITE_API_URL;
 const BASE = RAW_BASE.replace(/\/$/, "");
 
 // Axios instance
