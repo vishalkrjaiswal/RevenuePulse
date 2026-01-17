@@ -4,11 +4,9 @@ import axios from "axios";
 axios.defaults.withCredentials = true;
 
 // Base URL from env variable (no trailing slash)
-const RAW_BASE = import.meta.env.VITE_API_URL;
-if (!RAW_BASE) {
-  throw new Error("VITE_API_URL is not defined. Check environment variables.");
-}
-const BASE = RAW_BASE.replace(/\/$/, "");
+const RAW_BASE = import.meta.env.VITE_API_URL || "http://localhost:4000";
+
+const BASE = RAW_BASE ? RAW_BASE.replace(/\/$/, "") : "http://localhost:4000";
 
 // Axios instance
 const api = axios.create({
