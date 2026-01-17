@@ -35,7 +35,6 @@ export default function ProductManagement() {
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
   const [showAddModal, setShowAddModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     loadProducts();

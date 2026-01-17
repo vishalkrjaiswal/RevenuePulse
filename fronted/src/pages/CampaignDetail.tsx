@@ -21,13 +21,6 @@ interface Campaign {
   sentAt?: string;
 }
 
-interface Customer {
-  _id: string;
-  name: string;
-  email: string;
-  attributes?: Record<string, any>;
-}
-
 export default function CampaignDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();

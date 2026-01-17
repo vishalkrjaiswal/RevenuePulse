@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useParams, useLocation } from "react-router-dom";
+import { useNavigate, useParams} from "react-router-dom";
 import { Mail, MessageCircle, Check } from "lucide-react";
 import api from "../api/apiClient";
 import Header from "../components/Header";
