@@ -9,6 +9,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 
 // Import components
 import Sidebar from "./components/Sidebar";
+import PrivateRoute from './components/PrivateRoute';
 
 // Import pages
 import Dashboard from "./pages/Dashboard";
@@ -60,25 +61,25 @@ function AppLayout() {
       <Sidebar />
       <main className="flex-1 ml-72">
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/customers" element={<Customers />} />
-          <Route path="/customers/:id" element={<CustomerDetail />} />
-          <Route path="/customers/new" element={<CreateCustomer />} />
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/products" element={<ProductManagement />} />
-          <Route path="/payments" element={<PaymentListPage />} />
-          <Route path="/payments/:id" element={<PaymentPage />} />
-          <Route path="/orders/:id" element={<OrderDetail />} />
-          <Route path="/orders/new" element={<CreateOrder />} />
-          <Route path="/segments" element={<Segments />} />
-          <Route path="/segments/new" element={<CreateSegment />} />
-          <Route path="/segments/:id" element={<SegmentDetail />} />
-          <Route path="/campaigns" element={<Campaigns />} />
-          <Route path="/campaigns/new" element={<CreateCampaign />} />
-          <Route path="/campaigns/:id" element={<CampaignDetail />} />
-          <Route path="/logs" element={<CommunicationLogs />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+          <Route path="/customers" element={<PrivateRoute><Customers /></PrivateRoute>} />
+          <Route path="/customers/:id" element={<PrivateRoute><CustomerDetail /></PrivateRoute>} />
+          <Route path="/customers/new" element={<PrivateRoute><CreateCustomer /></PrivateRoute>} />
+          <Route path="/orders" element={<PrivateRoute><Orders /></PrivateRoute>} />
+          <Route path="/products" element={<PrivateRoute><ProductManagement /></PrivateRoute>} />
+          <Route path="/payments" element={<PrivateRoute><PaymentListPage /></PrivateRoute>} />
+          <Route path="/payments/:id" element={<PrivateRoute><PaymentPage /></PrivateRoute>} />
+          <Route path="/orders/:id" element={<PrivateRoute><OrderDetail /></PrivateRoute>} />
+          <Route path="/orders/new" element={<PrivateRoute><CreateOrder /></PrivateRoute>} />
+          <Route path="/segments" element={<PrivateRoute><Segments /></PrivateRoute>} />
+          <Route path="/segments/new" element={<PrivateRoute><CreateSegment /></PrivateRoute>} />
+          <Route path="/segments/:id" element={<PrivateRoute><SegmentDetail /></PrivateRoute>} />
+          <Route path="/campaigns" element={<PrivateRoute><Campaigns /></PrivateRoute>} />
+          <Route path="/campaigns/new" element={<PrivateRoute><CreateCampaign /></PrivateRoute>} />
+          <Route path="/campaigns/:id" element={<PrivateRoute><CampaignDetail /></PrivateRoute>} />
+          <Route path="/logs" element={<PrivateRoute><CommunicationLogs /></PrivateRoute>} />
+          <Route path="/analytics" element={<PrivateRoute><Analytics /></PrivateRoute>} />
+          <Route path="*" element={<PrivateRoute><NotFound /></PrivateRoute>} />
         </Routes>
       </main>
     </div>
