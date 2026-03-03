@@ -48,6 +48,9 @@ app.use("/api/communication-logs", communicationLogRoutes);
 
 // Basic health check
 app.get("/health", (req, res) => res.json({ status: "ok" }));
+app.get("/", (req, res) => {
+  res.send("API Running");
+});
 
 // Global error handler
 app.use((err, req, res, next) => {
