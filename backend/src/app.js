@@ -24,12 +24,11 @@ const app = express();
 // Middlewares
 app.use(
   cors({
-    origin:"https://revenue-pulse.vercel.app/#/login",
+    origin: "https://revenue-pulse.vercel.app",
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    allowedHeaders: ["Content-Type", "Authorization", "Cookie"],
   })
 );
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
