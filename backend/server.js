@@ -3,8 +3,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 
-import mongooseConnect from "./config/mongoose.js";
-import app from "./app.js";
+import mongooseConnect from "./src/config/mongoose.js";
+import app from "./src/app.js";
 
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGO_URI;
